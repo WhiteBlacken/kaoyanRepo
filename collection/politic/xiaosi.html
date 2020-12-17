@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/QW/AppData/Local/Temp/mume20201117-13400-1m81phe.8jba.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>肖4</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="./xiaosi_files/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E8%82%96%E5%9B%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E8%83%8C%E8%AF%B5">肖四知识点背诵</h1>
+
+<h2 class="mume-header" id="%E8%87%AA%E6%9F%A5%E8%A1%A8">自查表</h2>
+
+<table>
+<thead>
+<tr>
+<th>试卷</th>
+<th>复习1</th>
+<th>复习2</th>
+<th>复习3</th>
+<th>主要问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一套</td>
+<td>√</td>
+<td></td>
+<td></td>
+<td>马原，时政</td>
+</tr>
+<tr>
+<td>第二套</td>
+<td>√</td>
+<td></td>
+<td></td>
+<td>马原、时政</td>
+</tr>
+<tr>
+<td>第三套</td>
+<td></td>
+<td></td>
+<td></td>
+<td>毛中特、时政</td>
+</tr>
+<tr>
+<td>第四套</td>
+<td></td>
+<td></td>
+<td></td>
+<td>史纲，时政</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="%E6%95%B4%E6%94%B9">整改</h2>
+
+<blockquote>
+<p><a href="file:///F:/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/%E4%B8%93%E4%B8%9A/notebook">马原</a>：就题论题，重点辨析<br><a href="file:///F:/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/%E4%B8%93%E4%B8%9A/notebook">时政</a>：开始肖秀荣的形式与政策</p>
+</blockquote>
+<h2 class="mume-header" id="%E7%AC%AC%E4%B8%80%E5%A5%97">第一套</h2>
+
+<ul>
+<li>价值评价的标准归根到底是 <strong>主体的需要</strong></li>
+<li>帝国主义的实质是 <strong>垄断资本凭借垄断地位获取高额利润</strong></li>
+<li>国家垄断资本主义是 <strong>私人垄断资本为了维护垄断统治和获取高额垄断利润，而与国家政权相结合的一种垄断资本主义形式</strong></li>
+<li>辨析：超额利润 vs 高额利润
+<ul>
+<li><strong>涉及垄断选“高额利润”或“高额垄断垄断利润”</strong></li>
+</ul>
+</li>
+<li>发展的矛盾与问题集中在 <strong>发展质量上</strong></li>
+<li>自由贸易港建设中，要把 <strong>制度集成创新</strong> 摆在突出位置</li>
+<li>全面推进依法治国
+<ul>
+<li>总目标：<strong>建设中国特色社会主义法治体系，建设社会主义法治国家</strong></li>
+<li>着力点：<strong>解决法治领域的突出问题</strong></li>
+</ul>
+</li>
+<li>几个重要结点
+<ul>
+<li>瓦窑堡：<strong>1935 统一战线</strong></li>
+<li>中共中央致电国民党五届三中全会：<strong>1937，提出停止内战，一致对外</strong></li>
+<li>洛川会议：<strong>1937，全面抗战，抗日救国十大纲领</strong></li>
+<li>1939三个口号：
+<ul>
+<li><strong>坚持抗战到底，反对中途妥协</strong></li>
+<li><strong>巩固国内团结，反对内部分裂</strong></li>
+<li><strong>力求全国进步，反对向后倒退</strong><br>
+<strong>（主义没有反对反共，融共之类的口号）</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>十四五时期的经济社会发展
+<ul>
+<li>主题：<strong>高质量发展</strong></li>
+<li>主线：<strong>供给侧改革</strong></li>
+<li>根本动力：<strong>改革创新</strong></li>
+<li>根本目的：<strong>满足人民日益增长的美好生活的需要</strong></li>
+</ul>
+</li>
+<li>不可能是否可以转换为可能？
+<ul>
+<li><strong>不可以</strong></li>
+</ul>
+</li>
+<li>使用价值 vs 价值
+<ul>
+<li><strong>价值寓于使用价值之中</strong></li>
+<li>价值的物质承担者是；<strong>使用价值</strong></li>
+<li>价值的表现形式：<strong>交换价值</strong></li>
+<li>交换价值的基础：<strong>价值</strong></li>
+<li>社会财富的源泉：<strong>劳动，自然物质条件（劳动对象和劳动资料）</strong></li>
+</ul>
+</li>
+<li>经济相对落后的国家建设社会主义具有长期性，主要原因是
+<ul>
+<li><strong>生产力发展状况的制约</strong></li>
+<li><strong>经济基础和上层建筑发展状况的制约</strong></li>
+<li><strong>国际环境的严峻挑战</strong></li>
+<li><strong>马克思主义执政党对社会主义发展道路的探索和对社会主义建设规律的认识，需要一个长期的过程</strong></li>
+</ul>
+</li>
+<li>加快科技创新是否是实现人民高品质生活的需要？
+<ul>
+<li><strong>是</strong></li>
+</ul>
+</li>
+<li>决定当代中国命运的关键一招 vs 实现中华民族伟大复兴的关键一步
+<ul>
+<li><strong>改革开放</strong></li>
+<li><strong>全面建成小康社会</strong></li>
+</ul>
+</li>
+<li>改革开放
+<ul>
+<li><strong>赶上时代的重要法宝和当代中国最显著的特征</strong></li>
+<li><strong>坚持和发展社会主义、实现中华民族伟大复兴的必由之路</strong></li>
+<li><strong>是决定当代中国命运的关键一招</strong></li>
+</ul>
+</li>
+<li>中华民族从近代以来陷入深重危机走向伟大复兴的历史转折点是
+<ul>
+<li><strong>抗日战争胜利</strong></li>
+</ul>
+</li>
+<li>文化
+<ul>
+<li><strong>统筹推进五位一体总体布局，协调推进四个全面战略布局的重要内容</strong></li>
+<li><strong>推动高质量发展的重要基点</strong></li>
+<li><strong>满足人民日益增长的美好生活需要的重要因素</strong></li>
+<li><strong>战胜前进道路上的各种风险挑战的重要力量源泉</strong></li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="%E7%AC%AC%E4%BA%8C%E5%A5%97">第二套</h2>
+
+<ul>
+<li>新时代推进农村土地制度改革
+<ul>
+<li>出发点和落脚点：<strong>依法维护农民权益</strong></li>
+<li>两个不动摇：
+<ul>
+<li><strong>坚持农村土地农民集体所有制不动摇</strong></li>
+<li><strong>坚持加成承包经营基础性地位不动摇</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>四个全面的相关辨析
+<ul>
+<li>突破性和先导性的关键环节
+<ul>
+<li><strong>全面深化改革</strong></li>
+</ul>
+</li>
+<li>处于引领地位的是
+<ul>
+<li><s>全面建成小康社会</s> 在十四五规划中已经更改为：<strong>全面建成社会主义现代化国家</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>人类是够可以通过实践创造出世界上原来没有东西？
+<ul>
+<li><strong>可以</strong></li>
+</ul>
+</li>
+<li>经济社会发展必须坚持的主线
+<ul>
+<li><strong>供给侧改革</strong></li>
+</ul>
+</li>
+<li>社会建设的根本任务
+<ul>
+<li><strong>改善民生，创新社会治理、坚持总体国家安全观</strong></li>
+</ul>
+</li>
+<li>熟读：<strong>坚持人与自然和谐共生是新时代坚持和发展中国特色社会主义的一条基本方略</strong></li>
+<li>《论持久战》的时间
+<ul>
+<li><strong>1938</strong></li>
+</ul>
+</li>
+<li>“发展进步势力，争取中间势力，反对顽固势力”提出的时间
+<ul>
+<li><strong>1940 毛《目前抗日统一战线中的策略问题》</strong></li>
+</ul>
+</li>
+<li>法治
+<ul>
+<li><strong>治国理政的基本方式</strong></li>
+<li><strong>国家治理体系和治理能力的重要依托</strong>
+<ul>
+<li>辨析：全面依法治国的重要依托
+<ul>
+<li><strong>有力的法治保障体系</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>国家核心竞争力的重要内容</strong></li>
+<li><strong>制度之治最基本最稳定的保障</strong></li>
+</ul>
+</li>
+<li>解决一切问题的总钥匙
+<ul>
+<li><strong>发展</strong></li>
+</ul>
+</li>
+<li>《勠力同心 共创未来》中习近平提出
+<ul>
+<li>新“四个坚持”
+<ul>
+<li><strong>坚持多边主义</strong></li>
+<li><strong>坚持开放包容</strong></li>
+<li><strong>坚持互利合作</strong></li>
+<li><strong>坚持与时俱进</strong></li>
+</ul>
+</li>
+<li>如何在全球秩序和国际治理方面发挥更大引领作用
+<ul>
+<li><strong>加强以联合国为核心的国际体系</strong></li>
+<li><strong>完善经济全球化治理架构</strong></li>
+<li><strong>推动数字经济健康发展</strong></li>
+<li><strong>提高应对全球性挑战的能力</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="%E7%AC%AC%E4%B8%89%E5%A5%97">第三套</h2>
+
+<ul>
+<li>感性认识和理性认识有无绝对分明的界限？谁为基础？
+<ul>
+<li><strong>无；感性认识为基础</strong></li>
+</ul>
+</li>
+<li>判断：真理的绝对性寓于真理的相对性之中
+<ul>
+<li><strong>√</strong> 反之还不知道</li>
+</ul>
+</li>
+<li>社会再生产的核心问题
+<ul>
+<li><strong>社会总产品的价值补偿和实物补偿问题</strong></li>
+</ul>
+</li>
+<li>坚持以马克思主义为指导，最重要的是
+<ul>
+<li><strong>坚持马克思主义对于研究未来社会制度的科学方法</strong></li>
+</ul>
+</li>
+<li>《十四五&amp;&amp;2035》中指明
+<ul>
+<li>国家发展的战略支撑
+<ul>
+<li><strong>科技自立自强</strong></li>
+</ul>
+</li>
+<li>（以下并非一定是十九届五中提出的）</li>
+<li>发展经济的着力点
+<ul>
+<li><strong>实体经济</strong>
+<ul>
+<li>实体经济 vs 国有经济</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>夯实现代化经济体系的重要基础
+<ul>
+<li><strong>乡村振兴战略</strong></li>
+</ul>
+</li>
+<li>优化现代化经济体系空间布局
+<ul>
+<li><strong>推动城乡区域协调发展</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>四个伟大
+<ul>
+<li>伟大梦想：<strong>目标，指引前进方向</strong></li>
+<li>伟大斗争：<strong>手段，激发前进动力</strong></li>
+<li>伟大工程：<strong>保障，提供前进保障</strong>（决定性作用）</li>
+<li>伟大事业：<strong>主题，开辟前进道路</strong></li>
+</ul>
+</li>
+<li>人与自然相处
+<ul>
+<li>应秉持的态度：<strong>尊重自然</strong></li>
+<li>应遵循的基本原则：<strong>顺应自然</strong></li>
+<li>应承担的责任：<strong>保护自然</strong></li>
+</ul>
+</li>
+<li>中国特色社会主义法治体系包括
+<ul>
+<li>法律规范体系
+<ul>
+<li><strong>前提，是法治国家、政府和社会的制度基础</strong></li>
+</ul>
+</li>
+<li>法治实施体系
+<ul>
+<li><strong>重点</strong></li>
+</ul>
+</li>
+<li>法制监督体系
+<ul>
+<li><strong>宪法法律有效实施的重要保障</strong></li>
+</ul>
+</li>
+<li>法治保障体系
+<ul>
+<li><strong>全面依法治国的重要依托</strong></li>
+</ul>
+</li>
+<li>党内法规体系</li>
+</ul>
+</li>
+<li>太空探索大事记
+<ul>
+<li>2020.11 嫦娥五号探测器
+<ul>
+<li><strong>首次地外天体采样返回之旅（重点）</strong></li>
+</ul>
+</li>
+<li>2020.7 天问一号
+<ul>
+<li><strong>我国自主探测行星第一步（重点）</strong></li>
+</ul>
+</li>
+<li>2020.5 长征五号运载火箭
+<ul>
+<li>我国太空站在轨建造任务的序幕</li>
+</ul>
+</li>
+<li>2019 嫦娥四号
+<ul>
+<li>人类探测器首次月背软着陆（也就是说这个选项不可能选）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>一般和个别，谁存在于谁？
+<ul>
+<li><strong>一般存在于个别之中</strong></li>
+</ul>
+</li>
+<li>衡量社会进步的根本尺度
+<ul>
+<li><strong>生产力</strong></li>
+</ul>
+</li>
+<li>社会历史存在和发展的前提
+<ul>
+<li><strong>现实的人及其活动</strong></li>
+</ul>
+</li>
+<li>影响劳动生产率的因素
+<ul>
+<li><strong>劳动者的平均熟练程度</strong></li>
+<li><strong>科学技术的发展及其应用</strong></li>
+<li><strong>生产过程中的社会结合</strong></li>
+<li><strong>生产资料的规模效能及自然条件</strong></li>
+</ul>
+</li>
+<li>影响资本周转快慢的因素
+<ul>
+<li><strong>资本周转时间</strong></li>
+<li><strong>生产资本中固定资本和流动资本的构成</strong></li>
+</ul>
+</li>
+<li>中国的制度能否在世界上推广？
+<ul>
+<li><strong>不能，社会主义制度和发展道路没有固定模式，中国也不会在世界上推广中国特色的制度</strong></li>
+</ul>
+</li>
+<li>讲好中国故事
+<ul>
+<li><strong>树立当代中国良好形象，提升国家文化软实力的重要战略任务</strong></li>
+<li><strong>提高中华文化影响力的基本途径</strong></li>
+<li><strong>形成同我国综合国力相适应的国际话语权</strong></li>
+</ul>
+</li>
+<li>社会主义法律的基本属性和社会主义法治的基本要求
+<ul>
+<li><strong>平等</strong></li>
+<li>是否可以说成公平正义？
+<ul>
+<li><strong>不可以</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>熟读：<strong>推动高质量发展是做好经济工作的根本要求</strong></li>
+<li>《十四五与2035》如何评价高质量发展
+<ul>
+<li><strong>适应我国主要矛盾变化的需要</strong></li>
+<li><strong>构建新发展格局的需要</strong></li>
+<li><strong>深入防范化解重大风险的需要</strong></li>
+<li><strong>顺利开启全面建设社会主义现代化国家新征程的需要</strong></li>
+</ul>
+</li>
+<li>习大大讲话
+<ul>
+<li>上海合作组织 《上海精神》
+<ul>
+<li><strong>四个共同体</strong>
+<ul>
+<li>卫生健康</li>
+<li>安全</li>
+<li>发展</li>
+<li>人文</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>二十国领导人峰会 《勠力战疫 共创未来》
+<ul>
+<li><strong>新四个坚持</strong>（20/5=4，是四个坚持）</li>
+<li>发挥更大引领作用（四个举措，见前）</li>
+<li>中国四个做法
+<ul>
+<li><strong>缓债减债</strong></li>
+<li><strong>妇女事业</strong></li>
+<li><strong>粮食减损大会</strong></li>
+<li><strong>碳排放问题</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>金砖国家 《守望相助 携手同心》
+<ul>
+<li><strong>五个坚持</strong>（金砖国家是五国，所以五个坚持）
+<ul>
+<li>坚持多边主义</li>
+<li>坚持团结协作</li>
+<li>坚持开放创新</li>
+<li>坚持民生优先</li>
+<li>坚持低碳绿色</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>亚太经合 《亚太共同体》
+<ul>
+<li><strong>构建开放包容，创新增长、互联互通、合作共赢的亚太命运共同体</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="%E7%AC%AC%E5%9B%9B%E5%A5%97">第四套</h2>
+
+<ul>
+<li>时空与运动
+<ul>
+<li>运动与时空可以分割吗？
+<ul>
+<li><strong>不可以，没有离开时空的运动，也没有离开运动的时空</strong></li>
+</ul>
+</li>
+<li>物质运动时空的客观实在性是——，其具体特性是——
+<ul>
+<li><strong>绝对的</strong></li>
+<li><strong>相对的</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>社会主义民主
+<ul>
+<li>最基本的体现：<strong>政治协商，民主监督，参政议政</strong></li>
+<li>特点和优势、真谛：<strong>三个商量</strong></li>
+<li>爱国统一战线的方针：<strong>坚持一致性与多样性的统一</strong></li>
+</ul>
+</li>
+<li>十四五时期遵循的原则中放在首位的是
+<ul>
+<li><strong>坚持党的全面领导</strong></li>
+</ul>
+</li>
+<li>抗战胜利的因素
+<ul>
+<li>关键：<strong>中国共产党发挥中流砥柱作用</strong></li>
+<li>重要法宝：<strong>全民族抗战</strong></li>
+<li>决定因素：<strong>以爱国主义为核心的民族精神</strong></li>
+</ul>
+</li>
+<li>社会主义核心价值观的三个特性，其中最根本的是？
+<ul>
+<li><strong>人民性</strong>（根本）</li>
+<li><strong>先进性</strong></li>
+<li><strong>真实性</strong></li>
+</ul>
+</li>
+<li>法治
+<ul>
+<li>法律实施和实现的基本环节：<strong>守法</strong></li>
+<li>法律实施和实现的重要环节：<strong>行政执法</strong></li>
+<li>法治的生命线：<strong>公平</strong></li>
+</ul>
+</li>
+<li>深圳 vs 海南 vs 长三角 vs 港澳 vs 浦东
+<ul>
+<li>深圳：经济特区
+<ul>
+<li>特区精神
+<ul>
+<li><strong>敢闯敢试</strong></li>
+<li><strong>敢为人先</strong></li>
+<li><strong>埋头苦干</strong></li>
+</ul>
+</li>
+<li>赋予深圳改革更多自主权的方式
+<ul>
+<li><strong>清单批量授权</strong></li>
+</ul>
+</li>
+<li>特指深圳的说法
+<ul>
+<li><strong>中国特色社会主义综合改革试点先行示范区</strong></li>
+<li><strong>社会主义现代化强国的城市范例</strong></li>
+<li><strong>率先实现现代化</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>海南：自贸区
+<ul>
+<li>新发展的格局的重要举措
+<ul>
+<li><strong>建立自贸区</strong></li>
+</ul>
+</li>
+<li>海南自贸港建设要把什么放在突出地位？
+<ul>
+<li><strong>制度集成创新</strong></li>
+</ul>
+</li>
+<li>海南关键词
+<ul>
+<li><strong>自由便利</strong></li>
+<li>制度安排
+<ul>
+<li><strong>零关税</strong></li>
+</ul>
+</li>
+<li>政策举措
+<ul>
+<li><strong>既准入又准营</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>长三角：一体化
+<ul>
+<li>特点
+<ul>
+<li><strong>率先实现新发展格局</strong></li>
+<li><strong>勇当我国科技和产业创新的开路先锋</strong></li>
+<li><strong>加快打造改革开放新高地</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>港澳：特别行政区
+<ul>
+<li>特点：
+<ul>
+<li><strong>三权分置（不是三权分立）</strong></li>
+<li><strong>行政主导</strong></li>
+<li><strong>司法独立</strong></li>
+<li><strong>特区长官直接向中央负责</strong></li>
+<li><strong>中央对其有全面管治权</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>浦东
+<ul>
+<li>高水平改革开放，社会主义现代化建设引领区</li>
+</ul>
+</li>
+<li>辨析：发挥全国改革开放和社会主义现代化建设的重要窗口和示范带动作用：<strong>1980年的四个经济特区，1988年的海南经济开放区</strong>（所以遇到这个一定不选）</li>
+</ul>
+</li>
+<li>对立统一规律
+<ul>
+<li><strong>同一性是事物存在和发展的前提</strong></li>
+<li><strong>矛盾双方，一方的发展以另一方的发展为条件</strong></li>
+<li><strong>矛盾的同一性使矛盾双方相互吸取有利于自身的因素，在相互作用中各自得到发展，规定了事物之间相互贯通，可以相互转化</strong></li>
+<li><strong>矛盾推动事物发展是同一性和斗争性共同作用的结果</strong></li>
+</ul>
+</li>
+<li>判断：自然规律发挥作用离不开人的参与？
+<ul>
+<li><strong>错误，自然规律通过盲目的，不自觉的力量在起作用并实现出来</strong></li>
+</ul>
+</li>
+<li>资本主义经济危机爆发的根本原因
+<ul>
+<li><strong>资本主义的基本矛盾</strong></li>
+</ul>
+</li>
+<li>列宁晚年思想（7）
+<ul>
+<li>合作社</li>
+<li>大工业</li>
+<li>文化教育</li>
+<li>资为社用</li>
+<li>党内团结</li>
+<li>机构改革</li>
+<li>民主法治</li>
+</ul>
+</li>
+<li>处于我国现代化建设全局核心地位的是？
+<ul>
+<li><strong>创新</strong></li>
+</ul>
+</li>
+<li>解放和发展社会生产力的关键，推动国家发展的根本动力
+<ul>
+<li><strong>改革</strong></li>
+</ul>
+</li>
+<li>我国攀登科技高峰、迈向航天强国的重要里程碑，中国特色社会主义进入新时代取得的重大标志性战略成果
+<ul>
+<li><strong>北斗三号</strong></li>
+</ul>
+</li>
+<li>无产阶级和五四运动的关系
+<ul>
+<li><strong>五四运动期间，无产阶级作为独立的政治力量登上舞台，对五四运动的发展起着决定性作用，但不是领导者</strong></li>
+</ul>
+</li>
+<li>解决路线问题
+<ul>
+<li>军事和组织路线：<strong>遵义会议</strong></li>
+<li>政治路线：<strong>瓦窑堡会议</strong></li>
+<li>思想路线：<strong>延安整风</strong></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  </body></html>
